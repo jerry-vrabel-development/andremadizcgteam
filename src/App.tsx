@@ -17,7 +17,7 @@ function App() {
   updateServiceWorker();
 
   return (
- <Router>
+ <Router basename="/andremadizcgteam/">
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />

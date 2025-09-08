@@ -67,9 +67,13 @@ if (!self.define) {
     });
   };
 }
-define(['./workbox-54d0af47'], (function (workbox) { 'use strict';
+define(['./workbox-b49cbce6'], (function (workbox) { 'use strict';
 
-  self.skipWaiting();
+  self.addEventListener('message', event => {
+    if (event.data && event.data.type === 'SKIP_WAITING') {
+      self.skipWaiting();
+    }
+  });
   workbox.clientsClaim();
 
   /**
@@ -82,11 +86,22 @@ define(['./workbox-54d0af47'], (function (workbox) { 'use strict';
     "revision": "3ca0b8505b4bec776b69afdba2768812"
   }, {
     "url": "index.html",
-    "revision": "0.eu7g5imn8eo"
+    "revision": "0.k2fibl2gsf8"
   }], {});
   workbox.cleanupOutdatedCaches();
   workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL("index.html"), {
     allowlist: [/^\/$/]
   }));
+  workbox.registerRoute(/^https:\/\/jerry-vrabel-development.github.io\/andremadizcgteam\/.*/, new workbox.NetworkFirst({
+    "cacheName": "andremadizcgteam",
+    plugins: [new workbox.ExpirationPlugin({
+      maxEntries: 100,
+      maxAgeSeconds: 2592000
+    })]
+  }), 'GET');
+  workbox.registerRoute(/^https:\/\/jerry-vrabel-development.github.io\/andremadizcgteam\/api/, new workbox.StaleWhileRevalidate({
+    "cacheName": "api-cache",
+    plugins: []
+  }), 'GET');
 
 }));

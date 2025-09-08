@@ -1,4 +1,5 @@
 import './App.css'
+import { useRegisterSW } from 'virtual:pwa-register/react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/Layout/Layout";
 import { Home } from "./pages/Home";
@@ -8,6 +9,11 @@ import { Photos } from "./pages/Photos";
 import { Contact } from "./pages/Contact";
 
 function App() {
+
+  const { offlineReady, needRefresh, updateServiceWorker } = useRegisterSW();
+
+  if (offlineReady) console.log("✅ PWA is ready to work offline");
+  if (needRefresh) console.log("🔄 A new version is ready – call updateServiceWorker()");
 
   return (
  <Router>

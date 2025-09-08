@@ -14,6 +14,7 @@ function App() {
 
   if (offlineReady) console.log("✅ PWA is ready to work offline");
   if (needRefresh) console.log("🔄 A new version is ready – call updateServiceWorker()");
+  updateServiceWorker();
 
   return (
  <Router>

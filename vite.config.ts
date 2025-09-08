@@ -39,5 +39,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/andremadizcgteam/',
+  base: '/andremadizcgteam.com/',
 })

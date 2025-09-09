@@ -24,9 +24,11 @@ const photos: Photo[] = [
 ];
 
 export const Photos: FC = () => (
-  <section className="space-y-8">
-    <h2 className="text-3xl font-semibold text-center mb-6">See How We Train</h2>
-    <h3>Please take a moment to view the photos below from various training sessions and events.</h3>
+  <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
+    <div className="text-center mb-12">
+      <h1 className="text-4xl font-extrabold text-indigo-700">See How We Train</h1>
+      <h2 className="text-lg text-center text-gray-600 mt-2">Please take a moment to view the photos below from various training sessions and events.</h2>
+    </div>
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {photos.map((p) => (
         <img

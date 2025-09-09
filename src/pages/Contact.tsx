@@ -21,8 +21,10 @@ export const Contact: FC = () => {
   };
 
   return (
-    <section className="space-y-8 max-w-2xl mx-auto">
-      <h2 className="text-3xl font-semibold text-center mb-6">Contact Us</h2>
+    <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-extrabold text-indigo-700">Contact Us</h1>
+      </div>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium mb-1" htmlFor="name">
@@ -33,7 +35,7 @@ export const Contact: FC = () => {
             type="text"
             ref={nameRef}
             required
-            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2
+            className="w-full border bg-white border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2
 focus:ring-indigo-500"
           />
         </div>
@@ -47,7 +49,7 @@ focus:ring-indigo-500"
             type="email"
             ref={emailRef}
             required
-            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2
+            className="w-full border bg-white border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2
 focus:ring-indigo-500"
           />
         </div>
@@ -61,7 +63,7 @@ focus:ring-indigo-500"
             ref={messageRef}
             required
             rows={4}
-            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2
+            className="w-full border bg-white border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2
 focus:ring-indigo-500"
           />
         </div>

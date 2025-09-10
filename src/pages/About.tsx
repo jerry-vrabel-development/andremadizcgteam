@@ -22,7 +22,7 @@ const aboutData = {
 };
 
 export const About: FC = () => (
-  <main className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
+  <main className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-gray-100 rounded">
     <div className="text-center mb-12">
       <h1 className="text-4xl font-extrabold text-indigo-700">Meet The Team</h1>
       <h3 className="text-lg text-gray-600 mt-2">You won’t find a group of athletes who work harder!</h3>

@@ -8,7 +8,7 @@ const externalLink = (href: string) => ({
 
 export const Footer: FC = () => {
   return (
-    <footer className="bg-red-900 text-gray-300 py-6">
+    <footer className="bg-red-900 text-gray-300 py-6 border-t border-yellow-300">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           <div className="space-y-2">

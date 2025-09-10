@@ -18,7 +18,7 @@ export const Header: FC = () => {
   const toggle = () => setIsOpen((o) => !o);
 
   return (
-    <header className="bg-red-900 shadow-sm">
+    <header className="bg-red-900 shadow-sm border-b border-yellow-300">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         <NavLink
           to="/"

@@ -98,18 +98,21 @@ const ClassCompositionChart: FC = () => {
         <circle cx={cx} cy={cy} r={innerRadius} fill="#fff" />
       </svg>
 
-      {/* Legend */}
-      <div className="mt-4 flex space-x-6">
-        {slices.map((s, i) => (
-          <div key={i} className="flex items-center space-x-2">
-            <div
-              className="w-3 h-3 rounded-full"
-              style={{ backgroundColor: s.color }}
-            />
-            <span className="text-xl sm:text-xl md:text-2xl lg:text-3xl">{s.label}</span>
-          </div>
-        ))}
-      </div>
+{/* Legend */}
+<div className="mt-4 flex flex-col sm:flex-row sm:flex-nowrap gap-3 sm:gap-4 lg:gap-6 space-y-2 sm:space-y-0
+sm:space-x-6">
+  {slices.map((s, i) => (
+    <div key={i} className="flex items-center space-x-2 flex-shrink-0">
+      <div
+        className="w-3 h-3 rounded-full"
+        style={{ backgroundColor: s.color }}
+      />
+      <span className="text-base sm:text-lg md:text-xl lg:text-2xl">
+        {s.label}
+      </span>
+    </div>
+  ))}
+</div>
     </div>
   );
 };

@@ -25,19 +25,19 @@ export const ProfileCard: FC<ProfileCardProps> = ({
       : `${bio.slice(0, previewLength)}…`;
 
   return (
-    <article className="flex flex-col sm:flex-row gap-4 p-6 bg-white rounded-lg shadow-md">
+    <article className="flex flex-col sm:flex-row gap-4 p-6 bg-red-900 rounded-lg shadow-md">
       <div className="flex-none">
         <img
           src={img!}
           alt={alt!}
-          className="w-36 h-36 object-cover rounded-full border-4 border-indigo-500"
+          className="w-36 h-36 object-cover rounded-full border-4 border-yellow-300"
         />
       </div>
 
       <div className="flex-1">
-        <h2 className="text-2xl font-semibold text-indigo-700">{name}</h2>
+        <h2 className="text-2xl font-semibold text-yellow-300">{name}</h2>
         <h3 className="text-sm text-indigo-500 mb-2">{role}</h3>
-        <p className="text-gray-700 leading-relaxed">{displayedBio}</p>
+        <p className="text-gray-200 leading-relaxed">{displayedBio}</p>
         {bio.length > previewLength && (
           <button
             onClick={() => setExpanded((e) => !e)}

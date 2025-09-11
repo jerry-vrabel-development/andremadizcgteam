@@ -18,8 +18,8 @@ const services = [
 export const Services: FC = () => (
   <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-gray-100 rounded">
     <div className="text-center mb-12">
-      <h1 className="text-4xl font-extrabold text-indigo-700">Come Train With The Best</h1>
-      <h3 className="text-lg text-gray-600 mt-2">You want to learn from world class champions and improve your mind, body and spirit. We can help.</h3>
+      <h1 className="text-5xl font-extrabold text-red-900">Come Train With The Best</h1>
+      <h3 className="text-2xl text-gray-600 mt-2">You want to learn from world class champions and improve your mind, body and spirit. We can help.</h3>
     </div>
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {services.map((service) => (

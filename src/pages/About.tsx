@@ -3,6 +3,7 @@ import { ProfileCard } from "../components/ProfileCard";
 import ClassCompositionChart from "../components/ClassCompositionChart";
 import TrainingIntro from "../components/TrainingIntro";
 import { Testimonial } from "../components/Testimonial";
+import { PricePlans } from "../components/PricePlans";
 
 import andrePhoto from "../assets/img/AndreMadiz.jpg";
 import arthurPhoto from "../assets/img/ArthurPike.png";
@@ -49,11 +50,11 @@ practice and persist.`,
 };
 
 export const About: FC = () => (
-  <main className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-gray-100 rounded-lg">
+  <main className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-gray-100 border-yellow-300 rounded-lg">
     {/* Header */}
     <div className="text-center mb-12">
-      <h1 className="text-4xl font-extrabold text-indigo-700">Meet The Team</h1>
-      <h3 className="text-lg text-gray-600 mt-2">
+      <h1 className="text-5xl font-extrabold text-red-900">Meet The Team</h1>
+      <h3 className="text-3xl text-gray-600 mt-2">
         You won’t find a group of athletes who work harder!
       </h3>
     </div>
@@ -64,11 +65,9 @@ export const About: FC = () => (
       <ProfileCard profile={aboutData.arthur} />
     </div>
 
-    {/* Class‑composition + training‑intro – flex‑row on lg, column on mobile */}
-    <div className="flex flex-col lg:flex-row lg:gap-12 lg:items-start">
-      {/* 1️⃣ Class Composition block */}
-      <div className="flex-1 lg:mr-6">
-        <h2 className="text-4xl text-center font-extrabold text-indigo-700 mb-2">
+    <div className="flex flex-col gap-12 ">
+      <div className="flex flex-col gap-4">
+        <h2 className="text-4xl text-center font-extrabold text-red-900 mb-2">
           Class Composition
         </h2>
         <h3 className="text-lg text-center text-gray-600 mb-6">
@@ -76,15 +75,19 @@ export const About: FC = () => (
         </h3>
         <ClassCompositionChart />
       </div>
-
-      {/* 2️⃣ Training Intro block – appears beside the chart on lg */}
-      <div className="flex-1 lg:ml-6">
-        <TrainingIntro />
+      <div className="flex flex-col lg:flex-row lg:gap-12">
+        <div className="flex-1">
+          <TrainingIntro />
+        </div>
       </div>
     </div>
-    <div className="flex-1 lg:mr-6">
-      <h2 className="text-4xl text-center font-extrabold text-indigo-700 mb-2">Testimonials</h2>
+    <div className="flex-1">
+      <h2 className="mt-8 text-4xl font-extrabold text-red-900 text-center mb-2">Testimonials</h2>
       <Testimonial />
+    </div>
+    <div className="flex flex-col gap-4">
+      <h2 className="mt-8 text-4xl font-extrabold text-red-900 text-center mb-2">Price Plans</h2>
+      <PricePlans />
     </div>
   </main>
 );

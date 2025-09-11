@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import { NewsletterSignup } from "../NewsletterSignup";
 
 const externalLink = (href: string) => ({
   href,
@@ -10,7 +11,9 @@ export const Footer: FC = () => {
   return (
     <footer className="bg-red-900 text-gray-300 py-6 border-t border-yellow-300">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        {/* 1‑col on small screens, 4‑col on md+ */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          {/* Column 1 – Address */}
           <div className="space-y-2">
             <h4 className="font-semibold text-yellow-300">Address</h4>
             <p className="text-sm">
@@ -18,6 +21,8 @@ export const Footer: FC = () => {
               Chicago, IL 60645
             </p>
           </div>
+
+          {/* Column 2 – Contact */}
           <div className="space-y-2">
             <h4 className="font-semibold text-yellow-300">Contact</h4>
             <p className="text-sm">
@@ -37,9 +42,17 @@ export const Footer: FC = () => {
               </a>
             </p>
           </div>
-          <div className="space-y-2">
-            <h4 className="font-semibold text-yellow-300">Follow Us</h4>
-            <div className="flex space-x-4">
+
+          {/* Column 3 – Newsletter only */}
+          <div className="space-y-6">
+            <h4 className="font-semibold text-yellow-300 mb-4">Stay Informed</h4>
+            <NewsletterSignup />
+          </div>
+
+          {/* Column 4 – Follow Us */}
+          <div className="text-center">
+            <h4 className="font-semibold text-yellow-300 mb-4">Follow Us</h4>
+            <div className="flex justify-center space-x-4">
               <a
                 {...externalLink("https://x.com/Andremadizteam")}
                 className="text-gray-400 hover:text-white transition-colors"
@@ -55,10 +68,13 @@ export const Footer: FC = () => {
 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.723 0-4.928 2.205-4.928 4.928 0
 .386.044.762.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.424.724-.666 1.562-.666 2.475 0 1.708.87 3.213 2.188
 4.096-.807-.026-1.566-.247-2.229-.616v.062c0 2.385 1.697 4.374 3.946 4.827-.413.112-.849.171-1.296.171-.314
-0-.622-.03-.924-.086.623 1.944 2.432 3.361 4.57 3.401-1.68 1.316-3.809 2.103-6.115 2.103-.397 0-.79-.023-1.175-.068 2.179
-1.397 4.768 2.214 7.557 2.214 9.054 0 14-7.496 14-13.986 0-.21-.005-.423-.014-.634.962-.693 1.797-1.56 2.457-2.548z" />
+0-.622-.03-.924-.086.623 1.944 2.432 3.361 4.57 3.401-1.68 1.316-3.809 2.103-6.115 2.103-.397
+0-.79-.023-1.175-.068 2.179
+1.397 4.768 2.214 7.557 2.214 9.054 0 14-7.496 14-13.986 0-.21-.005-.423-.014-.634.962-.693 1.797-1.56
+2.457-2.548z" />
                 </svg>
               </a>
+
               <a
                 {...externalLink("https://www.linkedin.com/in/andre-madiz-b50680b0/")}
                 className="text-gray-400 hover:text-white transition-colors"
@@ -71,25 +87,17 @@ export const Footer: FC = () => {
                   viewBox="0 0 24 24"
                 >
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239
-5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.5c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75
+5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.5c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75
+1.75.784 1.75
 1.75-.783 1.75-1.75 1.75zm13.5 11.5h-3v-5.5c0-1.327-.026-3.037-1.847-3.037-1.847 0-2.127 1.445-2.127
 2.937v5.6h-3v-10h2.881v1.367h.041c.401-.758 1.38-1.556 2.842-1.556 3.044 0 3.606 2.004 3.606 4.612v5.577z" />
                 </svg>
               </a>
             </div>
-            <div className="flex justify-center space-x-4 mt-2">
-              <a href="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Privacy
-              </a>
-              <a href="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Terms
-              </a>
-              
-            </div>
-            
           </div>
         </div>
       </div>
+
       <p className="text-center text-xs text-gray-500">
         &copy; {new Date().getFullYear()} Andre Madiz CG Team. All rights reserved.
       </p>

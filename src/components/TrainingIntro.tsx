@@ -3,12 +3,9 @@ import { Link } from "react-router-dom";
 
 const TrainingIntro: React.FC = () => {
   return (
-    <section className="bg-white py-12 md:py-20">
-      <div className="max-w-3xl mx-auto px-6 text-center">
-        {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">
-          Come Train With Pros
-        </h2>
+    <section className="bg-white rounded-xl shadow-md mt-4 py-2 md:py-2">
+      <div className="max-w-3xl mx-auto px-6 pt-4 mb-8 text-center">
+        <h2 className="text-4xl font-extrabold text-red-900 text-center mb-2">Come train with Pros</h2>
 
         {/* Body text */}
         <p className="text-lg md:text-xl text-gray-600 mb-8">
@@ -26,9 +23,7 @@ const TrainingIntro: React.FC = () => {
         {/* Call‑to‑action button */}
         <Link
           to="/contact"
-          className="inline-block px-8 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700
-transition"
-        >
+          className="px-8 py-3 bg-red-900 text-yellow-300 rounded-lg font-medium hover:bg-yellow-300 hover:text-red-900 transition-colors shadow-md hover:shadow-lg">
           Contact Us
         </Link>
       </div>

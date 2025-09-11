@@ -29,12 +29,12 @@ export const Contact: FC = () => {
   return (
     <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-gray-100 rounded">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-extrabold text-indigo-700">Contact Us</h1>
-        <h3 className="text-lg text-gray-600 mt-2">Conveniently located in Chicago's Logan Square neighborhood - just off the Blue Line Logan Square stop.</h3>
+        <h1 className="text-5xl font-extrabold text-red-900">Contact Us</h1>
+        <h3 className="text-xl text-gray-600 mt-2">Conveniently located in Chicago's Logan Square neighborhood - just off the Blue Line Logan Square stop.</h3>
     </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div>
-          <h2 className="text-3xl font-semibold text-indigo-700 mb-6">
+          <h2 className="text-3xl font-semibold text-red-900 mb-6">
             Send us a message
           </h2>
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -50,7 +50,7 @@ export const Contact: FC = () => {
                 type="text"
                 ref={nameRef}
                 required
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 transition-all"
               />
             </div>
 
@@ -66,7 +66,7 @@ export const Contact: FC = () => {
                 type="email"
                 ref={emailRef}
                 required
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 transition-all"
               />
             </div>
 
@@ -82,14 +82,14 @@ export const Contact: FC = () => {
                 ref={messageRef}
                 required
                 rows={5}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 transition-all"
               />
             </div>
 
             <div className="text-center">
               <button
                 type="submit"
-                className="px-8 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-colors shadow-md hover:shadow-lg"
+                className="px-8 py-3 bg-red-900 text-yellow-300 rounded-lg font-medium hover:bg-yellow-300 hover:text-red-900 transition-colors shadow-md hover:shadow-lg"
               >
                 Send Message
               </button>

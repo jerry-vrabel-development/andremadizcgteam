@@ -28,8 +28,8 @@ export const Photos: FC = () => {
   return (
     <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-gray-100 rounded">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-extrabold text-indigo-700">See How We Train</h1>
-        <h2 className="text-lg text-center text-gray-600 mt-2">
+        <h1 className="text-5xl font-extrabold text-red-900">See How We Train</h1>
+        <h2 className="text-xl text-center text-gray-600 mt-2">
           Please take a moment to view the photos below from various training sessions and events.
         </h2>
       </div>

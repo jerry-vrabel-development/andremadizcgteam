@@ -8,10 +8,10 @@ interface Slice {
 }
 
 const slices: Slice[] = [
-  { label: "Fitness Students", value: 60, color: "#4b0082" },
-  { label: "Amateur Fighters", value: 20, color: "#800080" },
+  { label: "Fitness Students", value: 60, color: "#fde047" },
+  { label: "Amateur Fighters", value: 20, color: "#742a2a" },
   { label: "Professional Fighters", value: 10, color: "#ff00ff" },
-  { label: "New/Basics Students",     value: 10, color: "#d3d3d3" }
+  { label: "New/Basics Students", value: 10, color: "#d3d3d3" }
 ];
 
 const total = slices.reduce((s, v) => s + v.value, 0);
@@ -106,7 +106,7 @@ const ClassCompositionChart: FC = () => {
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: s.color }}
             />
-            <span className="text-sm">{s.label}</span>
+            <span className="text-xl">{s.label}</span>
           </div>
         ))}
       </div>

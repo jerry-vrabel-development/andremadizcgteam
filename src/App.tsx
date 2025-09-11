@@ -32,7 +32,7 @@ function App() {
 
   useEffect(() => {
     const refMap: Record<string, React.RefObject<HTMLDivElement | null>> = {
-      '/andremadizcgteam/': homeRef,
+      '/': homeRef,
       '/about': aboutRef,
       '/services': servicesRef,
       '/photos': photosRef,

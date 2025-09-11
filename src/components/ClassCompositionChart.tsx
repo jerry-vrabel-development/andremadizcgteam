@@ -106,7 +106,7 @@ const ClassCompositionChart: FC = () => {
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: s.color }}
             />
-            <span className="text-xl">{s.label}</span>
+            <span className="text-xl sm:text-xl md:text-2xl lg:text-3xl">{s.label}</span>
           </div>
         ))}
       </div>

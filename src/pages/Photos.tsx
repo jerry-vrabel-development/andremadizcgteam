@@ -13,7 +13,7 @@ type Photo = { src: string; alt: string };
 const photos: Photo[] = [
   { src: jiuJitsu, alt: "Students of Brazilian Jiu Jitsu" },
   { src: andreThailand, alt: "Andre Training in Thailand" },
-  { src: andreWmo, alt: "Urban skyline at night" },
+  { src: andreWmo, alt: "Promoting World Muay Thai Organization" },
   { src: groupCeremony, alt: "Andre Teaching Muay Thai Ceremony" },
   { src: andreAward, alt: "Andre receiving the award belt at the World Muay Thai Championship" },
   { src: andreFight, alt: "Andre in a fighting stance during a mixed‑martial‑arts bout" },
@@ -45,7 +45,7 @@ export const Photos: FC = () => {
               alt={p.alt}
               loading="lazy"
               decoding="async"
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-contain"
             />
           </button>
         ))}
